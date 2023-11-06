@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+
+<body>
+    <h2>Find Min and Max element from array</h2>
+    <script>
+        let array = [];
+        let size = +prompt("Enter length of Array..");
+        for (let i = 0; i < size; i++) {
+            array[i] = +prompt(`Enter your ${i + 1} Element:`);
+        }
+        document.write(`Your Array elements : ${array}<br>`);
+
+        //finding min and max;
+        let max = array[0];//assume
+        let min = array[0]; //assume
+
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+
+            }
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+
+        document.write(`Max element : ${max}<br>`)
+        document.write(`Min element : ${min}`)
+    </script>
+</body>
+
+</html>
